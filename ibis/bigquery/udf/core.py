@@ -6,7 +6,10 @@ import contextlib
 import functools
 import inspect
 import textwrap
-from collections import ChainMap
+try: 
+    from collections import ChainMap
+except:
+    from chainmap import ChainMap
 
 import ibis.expr.datatypes as dt
 from ibis.bigquery.udf.find import find_names
